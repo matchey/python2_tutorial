@@ -3,7 +3,6 @@
 class FizzBuzz:
     def __init__(self, rules={}):
         self.rules = rules # {num:string, ...}
-        # self.rules = sorted(rules.items()) # {num:string, ...}
     
     def add_rule(self, num, string):
         self.rules[num] = string # numの倍数の時stringを返す
