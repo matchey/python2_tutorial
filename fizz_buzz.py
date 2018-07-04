@@ -18,7 +18,7 @@ class FizzBuzz:
 def main():
     # "3の倍数ならFizz、5の倍数ならBuzz、両方とも当てはまるならFizzBuzzを返す
     fizzbuzz = FizzBuzz({3:"Fizz", 5:"Buzz"})
-    # fizzbuzz.add_rule(2, "Pooh")
+    # fizzbuzz.add_rule(2, "Pooh") # 2の倍数のときにPooh
     fizzbuzz.show(31)
 
 if __name__ == "__main__":main()
