@@ -22,6 +22,8 @@ class Count21:
         while(last < self.total):
             says_min = last + 1
             says_max = last + self.seq
+            if(says_max > self.total): says_max = self.total
+
             if(turn):
                 if self.opt and self._optimazation(last):
                     says = self._optimazation(last)[0]
