@@ -9,8 +9,7 @@ class Count21:
         self.seq = seq # 一度に言える数の最大値(最小値は1)
         self.total = total # totalを言った方の負け
         self.opt = optimum # CPUが最善手を打つかどうか
-        strategy = (total - 1) % (seq + 1) # 最善手の最初の数
-        self.strategies = range(strategy, total, seq+1) # 勝つために言うべき数
+        self.strategies = range((total - 1) % (seq + 1), total, seq+1) # 勝つために言うべき数
 
     def optimum(self, opt=True):
         self.opt = opt
@@ -49,7 +48,7 @@ class Count21:
 def main():
     # 連続した数字を数字を交互に入力(3つまで)，21を言った方の負け
     count21 = Count21(3, 21)
-    # count21.optimum(false) # CPUランダム手
+    # count21.optimum(False) # CPUランダム手
     count21.play()
 
 if __name__ == "__main__":main()
